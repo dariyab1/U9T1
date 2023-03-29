@@ -27,4 +27,8 @@ public class Vehicle {
     public void addPassenger(int num){
         passengers+=num;
     }
+    public void setTollFee(double newFee){
+        tollFee=newFee;
+    }
+
 }

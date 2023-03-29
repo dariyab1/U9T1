@@ -23,11 +23,21 @@ public class Car extends Vehicle {
         return true;
     }
 
+    public void applyDiscount(){
+        if(!(discountApplied)&&isElectric()){
+            discountApplied=true;
+            setTollFee(getTollFee()*.5);
+        }
+    }
+
     public boolean isElectric(){
         return electric;
     }
     public boolean isDiscountApplied(){
         return discountApplied;
+    }
+    public void setDiscountApplied(){
+        discountApplied=true;
     }
 
 }
