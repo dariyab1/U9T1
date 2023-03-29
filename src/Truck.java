@@ -7,13 +7,6 @@ public class Truck extends Vehicle {
         this.axles = axles;
         this.hasTrailer = hasTrailer;
     }
-    public void printCTruck(){
-        System.out.println("License Plate: "+getLicensePlate());
-        System.out.println("Toll Fee: "+getTollFee());
-        System.out.println("Passengers: "+getPassengers());
-        System.out.println("Axles: "+axles);
-        System.out.println("Has trailer: "+hasTrailer);
-    }
 
     public boolean validateLicensePlate(){
         if(hasTrailer&&axles>4){
@@ -29,5 +22,21 @@ public class Truck extends Vehicle {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public double calculateTollPrice(){
+        double price=getTollFee()*axles;
+        if(hasTrailer){
+            price*=2;
+        }
+        return price;
+    }
+
+    @Override
+    public void printInfo(){
+        super.printInfo();
+        System.out.println("Number of axles: "+axles);
+        System.out.println("Has trailer: "+hasTrailer);
     }
 }
