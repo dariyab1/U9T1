@@ -37,4 +37,8 @@ public class Vehicle {
         System.out.println("Passengers: "+passengers);
     }
 
+    public double gasPrice(double pricePerGallon, int gallons){
+        return pricePerGallon*gallons;
+    }
+
 }

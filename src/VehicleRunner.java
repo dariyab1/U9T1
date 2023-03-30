@@ -49,6 +49,11 @@ public class VehicleRunner {
         Truck myTruck3 = new Truck("TB12MX", 15.50, 2, 4, true);
         myTruck3.printInfo();
 
+        System.out.println(myVehicle3.gasPrice(3.45, 10));
+        System.out.println(myCar3.gasPrice(3.45, 10));
+        System.out.println(myTruck3.gasPrice(3.45, 10));
+        System.out.println(myTaxi3.gasPrice(3.45, 10));
+
 
 
 

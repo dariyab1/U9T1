@@ -24,4 +24,11 @@ public class Taxi extends Car{
         return dropOffPassengers(getPassengers()-1);
     }
 
+
+    @Override
+    //company covers 25% of the cost of gas
+    public double gasPrice(double pricePerGallon, int gallons){
+        return super.gasPrice(pricePerGallon, gallons)*.75;
+    }
+
 }
